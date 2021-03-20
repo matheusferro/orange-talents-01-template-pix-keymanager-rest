@@ -37,6 +37,8 @@ dependencies {
     implementation("io.micronaut.grpc:micronaut-grpc-client-runtime")
     //Adicionado para validacoes.
     implementation('br.com.caelum.stella:caelum-stella-core:2.1.2')
+
+    annotationProcessor("io.micronaut:micronaut-validation")
 }
 
 
@@ -78,4 +80,8 @@ protobuf {
     generateProtoTasks {
         all()*.plugins { grpc {} }
     }
+}
+
+allOpen{
+    annotations("io.micronaut.http.annotation.Controller")
 }

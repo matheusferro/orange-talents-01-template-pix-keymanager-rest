@@ -14,3 +14,8 @@ grpc:
 #  server:
 #    health:
 #      enabled: true
+
+
+jackson:
+  serialization:
+    writeDatesAsTimestamps: false

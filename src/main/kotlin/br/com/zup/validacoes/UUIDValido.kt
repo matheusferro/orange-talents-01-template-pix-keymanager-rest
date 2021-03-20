@@ -16,7 +16,8 @@ import kotlin.reflect.KClass
 @Constraint(validatedBy = [])
 @Pattern(
     regexp = "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}",
-    flags = [Pattern.Flag.CASE_INSENSITIVE]
+    flags = [Pattern.Flag.CASE_INSENSITIVE],
+    message = "UUID deve ter um formato válido."
 )
 annotation class UUIDValido(
     val message: String = "UUID deve ter um formato válido.",
